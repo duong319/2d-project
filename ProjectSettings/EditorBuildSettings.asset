@@ -11,4 +11,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/main menu.unity
     guid: 07e417e493a86094396d6a8e419c1424
+  - enabled: 1
+    path: Assets/Scenes/Shop.unity
+    guid: 09e4492d6b43ed346a92158745430c06
+  - enabled: 1
+    path: Assets/Scenes/ChooseDragon.unity
+    guid: 3c2ac09bf60d0ab49bb4d13959d90208
   m_configObjects: {}

@@ -2488,6 +2488,11 @@ MonoBehaviour:
   - {fileID: 7911311754349291303, guid: f14dc9b0d84e30e49b94ffb31e3e8e88, type: 3}
   - {fileID: 5907767944839902144, guid: 03b269a48b8d4d240adbd9af522d2e7c, type: 3}
   - {fileID: 7278500241106934845, guid: dc87d794d18f022418a18ca980f56582, type: 3}
+  characterPrefabsmenu:
+  - {fileID: 2475900795883676035, guid: 6684f87fae8d4bb4b86d1817d3b8742d, type: 3}
+  - {fileID: 3586772225790355712, guid: 0165710b6fabbfd45ac58e69cd678efc, type: 3}
+  - {fileID: 4009168612582589905, guid: 74f57a47ad20c914089d8cde128787c2, type: 3}
+  - {fileID: 7879045764196673589, guid: 4c880cdfa900671499634b53adc4fc53, type: 3}
 --- !u!4 &2143528727
 Transform:
   m_ObjectHideFlags: 0

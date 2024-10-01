@@ -17,6 +17,7 @@ public class Player : MonoBehaviour
         gameController = FindObjectOfType<GameController>();
         animator = FindObjectOfType<Animator>();
         animator.SetFloat("flyPower", 0);
+      
     }
 
     void Update()

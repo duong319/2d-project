@@ -7,10 +7,13 @@ using UnityEngine.SceneManagement;
 
 public class ButtonManager : MonoBehaviour
 {
+    
+    
     public void ShowMainMenu()
     {
         SceneManager.LoadScene("main menu");
         Time.timeScale = 1;
+        
     }
 
     public void ShowShop()
@@ -31,6 +34,9 @@ public class ButtonManager : MonoBehaviour
     public void ChooseDragon()
     {
         SceneManager.LoadScene("ChooseDragon");
+       
+       
+
     }
 
     public void TapToPlay()

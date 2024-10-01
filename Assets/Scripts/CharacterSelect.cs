@@ -12,11 +12,17 @@ public class CharacterSelect : MonoBehaviour
     [SerializeField] GameObject[] icons;
     [SerializeField] TextMeshProUGUI characterName;
     [SerializeField] GameObject[] characterPrefabs;
+    [SerializeField] GameObject[] characterPrefabsmenu;
     public static GameObject selectedCharacter;
+    public static GameObject selectedCharactermenu;
+
 
     void Start()
     {
         Index = 0;
+       
+
+
         SelectCharacter();
     }
 
@@ -42,6 +48,7 @@ public class CharacterSelect : MonoBehaviour
     {
         for (int i = 0; i < characters.Length; i++)
         {
+           
             if (i == Index)
             {
                 characters[i].SetActive(true);
@@ -49,6 +56,7 @@ public class CharacterSelect : MonoBehaviour
                 icons[i].GetComponent<SpriteRenderer>().color = Color.white;
                 selectedCharacter = characterPrefabs[i];
                 characterName.text = characterPrefabs[i].name;
+                selectedCharactermenu = characterPrefabsmenu[i];
             }
             else
             {
@@ -56,6 +64,7 @@ public class CharacterSelect : MonoBehaviour
                 characters[i].GetComponent<Animator>().enabled = false;
                 icons[i].GetComponent<SpriteRenderer>().color = Color.black;
             }
+            
         }
     }
 
