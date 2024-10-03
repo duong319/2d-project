@@ -17,7 +17,7 @@ public class Player : MonoBehaviour
         gameController = FindObjectOfType<GameController>();
         animator = FindObjectOfType<Animator>();
         animator.SetFloat("flyPower", 0);
-      
+
     }
 
     void Update()
@@ -30,11 +30,11 @@ public class Player : MonoBehaviour
         animator.SetFloat("flyPower", rb.velocity.y);
     }
 
- 
+
 
     private void OnCollisionEnter2D(Collision2D col)
     {
-        if (col.gameObject.CompareTag("DeathZone")||col.gameObject.CompareTag("Obstacle"))
+        if (col.gameObject.CompareTag("DeathZone") || col.gameObject.CompareTag("Obstacle"))
         {
             gameController.SetGameOverState(true);
 
@@ -42,5 +42,7 @@ public class Player : MonoBehaviour
     }
 
    
+
+
 
 }

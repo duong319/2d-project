@@ -5,7 +5,8 @@ using UnityEngine;
 
 public class spawnPlayer : MonoBehaviour
 {
-
+    public GameObject Dragon;
+    public GameObject Dragonchoosed;
 
     void Start()
     {
@@ -17,6 +18,7 @@ public class spawnPlayer : MonoBehaviour
         }
         else
         {
+            Dragon.SetActive(false);
             Instantiate(selectedCharacter, transform.position, Quaternion.identity);
         }
 
