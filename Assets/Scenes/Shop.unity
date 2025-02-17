@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 44204128}
   - component: {fileID: 44204127}
   m_Layer: 5
-  m_Name: Rewards (1)
+  m_Name: malevol's Prices
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -443,6 +443,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rewards
       objectReference: {fileID: 0}
+    - target: {fileID: 3300350503944063463, guid: dfe70398a8d5a3c488ded48ddded0c93, type: 3}
+      propertyPath: m_Name
+      value: RewardsText
+      objectReference: {fileID: 0}
+    - target: {fileID: 4793844759639007242, guid: dfe70398a8d5a3c488ded48ddded0c93, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5268301704791594837, guid: dfe70398a8d5a3c488ded48ddded0c93, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: -329
@@ -661,6 +669,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 394488687}
   m_CullTransparentMesh: 1
+--- !u!114 &567034346 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4473463749229319241, guid: dfe70398a8d5a3c488ded48ddded0c93, type: 3}
+  m_PrefabInstance: {fileID: 243746648}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &802864350
 GameObject:
   m_ObjectHideFlags: 0
@@ -736,6 +755,73 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 802864350}
   m_CullTransparentMesh: 1
+--- !u!114 &875404279 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 976502168675650582, guid: dfe70398a8d5a3c488ded48ddded0c93, type: 3}
+  m_PrefabInstance: {fileID: 243746648}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &937484149
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 937484151}
+  - component: {fileID: 937484150}
+  m_Layer: 0
+  m_Name: LoadGame
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &937484150
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 937484149}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 426d760936d95424f9827ce6b338fb3a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  obstacle1: {fileID: 0}
+  obstacle2: {fileID: 0}
+  spawntime: 0
+  Textpoint: {fileID: 0}
+  TextReward: {fileID: 0}
+  randomObject: []
+  TotalReward: 0
+  TotalScore: 0
+  HighScore: 0
+  totalRewardText: {fileID: 875404279}
+  totalScoreText: {fileID: 567034346}
+  highScoreText: {fileID: 0}
+--- !u!4 &937484151
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 937484149}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 43.488884, y: 191.51749, z: -0.948294}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &971797462
 GameObject:
   m_ObjectHideFlags: 0
@@ -1131,7 +1217,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 
+  m_Text: 500
 --- !u!222 &1376143959
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1153,7 +1239,7 @@ GameObject:
   - component: {fileID: 1498994246}
   - component: {fileID: 1498994245}
   m_Layer: 5
-  m_Name: Rewards (1)
+  m_Name: aciagoh's Prices
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1331,7 +1417,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 
+  m_Text: 500
 --- !u!222 &1522761440
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2176,7 +2262,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 
+  m_Text: 500
 --- !u!1 &2057406368928735397
 GameObject:
   m_ObjectHideFlags: 0
@@ -2521,7 +2607,7 @@ GameObject:
   - component: {fileID: 7133098402222532729}
   - component: {fileID: 5683150541768458820}
   m_Layer: 5
-  m_Name: Rewards
+  m_Name: abtum's Prices
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3134,3 +3220,4 @@ SceneRoots:
   - {fileID: 2123319943}
   - {fileID: 1730445257}
   - {fileID: 7654113507106737618}
+  - {fileID: 937484151}

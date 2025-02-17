@@ -6,9 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Game Play.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 1
     path: Assets/Scenes/main menu.unity
     guid: 07e417e493a86094396d6a8e419c1424
   - enabled: 1
@@ -17,4 +14,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ChooseDragon.unity
     guid: 3c2ac09bf60d0ab49bb4d13959d90208
+  - enabled: 1
+    path: Assets/Scenes/Game Play.unity
+    guid: 61d685eaa65c6f34895432a28fb9b394
+  - enabled: 1
+    path: Assets/Scenes/DailyQuests.unity
+    guid: 9e1faa96e53cb5843ac3d9afcab30e69
+  - enabled: 1
+    path: Assets/Scenes/Map.unity
+    guid: a6982433c8cf95648bf54800842870e4
   m_configObjects: {}

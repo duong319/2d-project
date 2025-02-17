@@ -8,7 +8,7 @@ using UnityEngine.UIElements;
 
 public class GameController : MonoBehaviour
 {
-   
+
     public GameObject obstacle1;
     public GameObject obstacle2;
     public float spawntime;
@@ -18,17 +18,29 @@ public class GameController : MonoBehaviour
     int Reward;
     public Text Textpoint;
     public Text TextReward;
+  
     UiManager Ui;
     [SerializeField] GameObject[] randomObject;
+
+    public int TotalReward;
+    public int TotalScore;
+    public int HighScore;
+    public Text totalRewardText;
+    public Text totalScoreText;
+    public Text highScoreText;
+
+
 
 
 
 
     void Start()
     {
-       
+
         Spawntime = 0;
         Ui = FindObjectOfType<UiManager>();
+        Load();
+
     }
 
     // Update is called once per frame
@@ -47,6 +59,7 @@ public class GameController : MonoBehaviour
             SpawnObstacle();
             Spawntime = spawntime;
         }
+        Save();
     }
 
     public void SpawnObstacle()
@@ -60,8 +73,8 @@ public class GameController : MonoBehaviour
         Vector2 spawnPos2 = new Vector2(randXpos2, randYpos2);
 
         int i = Random.Range(0, randomObject.Length);
-        Vector2 spawn1 = new Vector2(randXpos1, (randYpos1 / 2)+0.2f);
-        Vector2 spawn2 = new Vector2(randXpos2, (randYpos2 / 2)-0.5f);
+        Vector2 spawn1 = new Vector2(randXpos1, (randYpos1 / 2) + 0.2f);
+        Vector2 spawn2 = new Vector2(randXpos2, (randYpos2 / 2) - 0.5f);
 
 
 
@@ -94,8 +107,10 @@ public class GameController : MonoBehaviour
     }
     public void RewardIncrement()
     {
-        Reward+=2;
-        TextReward.text= Reward.ToString();
+        Reward += 2;
+        TextReward.text = Reward.ToString();
+        TotalReward += 2;
+        
 
     }
 
@@ -111,6 +126,8 @@ public class GameController : MonoBehaviour
     {
         Score++;
         Textpoint.text = Score.ToString();
+        TotalScore++;
+      
 
 
     }
@@ -137,6 +154,21 @@ public class GameController : MonoBehaviour
     {
         Ui.showPauseGameScreen(false);
         Time.timeScale = 1;
+    }
+
+    public void Save()
+    {
+        PlayerPrefs.SetInt("reward", TotalReward);
+        PlayerPrefs.SetInt("score", TotalScore);
+        PlayerPrefs.Save();
+    }
+
+    public void Load()
+    {
+        TotalReward = PlayerPrefs.GetInt("reward", 0);
+        TotalScore = PlayerPrefs.GetInt("score", 0);
+        totalRewardText.text = TotalReward.ToString();
+        totalScoreText.text = TotalScore.ToString();
     }
 
 
