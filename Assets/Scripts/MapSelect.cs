@@ -13,7 +13,7 @@ public class MapSelect : MonoBehaviour
     [SerializeField] GameObject[] mapPrefabs;
    
     public static GameObject selectedMap;
-   
+
 
     void Start()
     {
@@ -22,7 +22,10 @@ public class MapSelect : MonoBehaviour
 
 
         SelectMap();
+     
     }
+
+
 
     public void PrevBtnClick()
     {
