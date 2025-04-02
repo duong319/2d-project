@@ -9,6 +9,7 @@ public class Player : MonoBehaviour
     Rigidbody2D rb;
     GameController gameController;
     private Animator animator;
+    AudioManager audioManager;
 
 
     void Start()
@@ -17,6 +18,7 @@ public class Player : MonoBehaviour
         gameController = FindObjectOfType<GameController>();
         animator = FindObjectOfType<Animator>();
         animator.SetFloat("flyPower", 0);
+        audioManager=GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
 
     }
 
@@ -25,6 +27,7 @@ public class Player : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(1))
         {
             rb.AddForce(new Vector2(0, flyPower));
+            audioManager.PlaySFX(audioManager.fly);
 
         }
         animator.SetFloat("flyPower", rb.velocity.y);
@@ -37,6 +40,7 @@ public class Player : MonoBehaviour
         if (col.gameObject.CompareTag("DeathZone") || col.gameObject.CompareTag("Obstacle"))
         {
             gameController.SetGameOverState(true);
+            audioManager.PlaySFX(audioManager.obstacleTouch);
 
         }
     }

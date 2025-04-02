@@ -18,6 +18,7 @@ public class init : MonoBehaviour
         }
         else
         {
+            Debug.Log("2");
             Dragon.SetActive(false);
             Instantiate(selectedCharactermenu, transform.position, Quaternion.identity);
         }

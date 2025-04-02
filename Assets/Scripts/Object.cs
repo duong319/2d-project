@@ -6,13 +6,15 @@ public class Object : MonoBehaviour
 {
     public float MoveSpeed;
     GameController gameController;
+    AudioManager audioManager;
 
     void Start()
     {
         gameController = FindObjectOfType<GameController>();
+        audioManager=GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
     }
 
-   
+
     void Update()
     {
         transform.position = transform.position + Vector3.left * MoveSpeed * Time.deltaTime;
@@ -24,6 +26,7 @@ public class Object : MonoBehaviour
         {
             gameController.RewardIncrement();
             Destroy(gameObject);
+            audioManager.PlaySFX(audioManager.rewardTouch);
 
         }
         if (col.CompareTag("SceneLimit"))

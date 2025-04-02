@@ -18,8 +18,10 @@ public class MapSelected : MonoBehaviour
         }
         else
         {
+            Debug.Log("1");
             Map.SetActive(false);
             Instantiate(selectedMap, transform.position, Quaternion.identity);
+
         }
 
 

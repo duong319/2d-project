@@ -1089,6 +1089,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 84543186744593849}
     m_Modifications:
+    - target: {fileID: 5572559191031033856, guid: cbf6e7dbbace35c4bb644841f3191ddb, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6502648536949740894, guid: cbf6e7dbbace35c4bb644841f3191ddb, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1151,7 +1155,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6502648536949740894, guid: cbf6e7dbbace35c4bb644841f3191ddb, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0.05506897
+      value: 0.055052757
       objectReference: {fileID: 0}
     - target: {fileID: 6502648536949740894, guid: cbf6e7dbbace35c4bb644841f3191ddb, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -1172,6 +1176,14 @@ PrefabInstance:
     - target: {fileID: 7087627070966733843, guid: cbf6e7dbbace35c4bb644841f3191ddb, type: 3}
       propertyPath: m_Name
       value: Quest
+      objectReference: {fileID: 0}
+    - target: {fileID: 7999941972686202567, guid: cbf6e7dbbace35c4bb644841f3191ddb, type: 3}
+      propertyPath: QuestDatas.id
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7999941972686202567, guid: cbf6e7dbbace35c4bb644841f3191ddb, type: 3}
+      propertyPath: questProgress.id
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1563,7 +1575,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 3731943609700016465}
   m_Direction: 2
   m_Value: 0
-  m_Size: 0.999996
+  m_Size: 0.99998933
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -1573,6 +1585,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 6502648536949740894, guid: cbf6e7dbbace35c4bb644841f3191ddb, type: 3}
   m_PrefabInstance: {fileID: 303687520423142545}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &5239810811186397541 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7999941972686202567, guid: cbf6e7dbbace35c4bb644841f3191ddb, type: 3}
+  m_PrefabInstance: {fileID: 303687520423142545}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8159b130334e49a41b9f9c467012e790, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &6022433524210062609
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1678,29 +1701,9 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0.00012838254}
+  m_AnchoredPosition: {x: 0, y: 0.00039263046}
   m_SizeDelta: {x: 0, y: 300}
   m_Pivot: {x: 0, y: 1}
---- !u!114 &7588613571540980795
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8365944511966873254}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 018d32e4c0cc7ab4888c59b3d052059d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dailyQuest: {fileID: 11400000, guid: 8c1a17b5e39de7542951fc99fccdf212, type: 2}
-  dailyQuestHandle: {fileID: 7999941972686202567, guid: cbf6e7dbbace35c4bb644841f3191ddb, type: 3}
-  Ui: {fileID: 6858096165677338193}
-  questProgressDataBase:
-    questProgresses:
-    - id: 1
-      progress: 2
-      hasClaimed: 0
 --- !u!222 &7902649118571964924
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1767,7 +1770,7 @@ GameObject:
   - component: {fileID: 2252663991220744369}
   - component: {fileID: 6022433524210062609}
   - component: {fileID: 8772142562237318830}
-  - component: {fileID: 7588613571540980795}
+  - component: {fileID: 8772142562237318831}
   m_Layer: 5
   m_Name: DailyQuest
   m_TagString: Untagged
@@ -1851,6 +1854,32 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &8772142562237318831
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8365944511966873254}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c69d27c615e1af459424eef0aee7bf5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  QuestDatas: {fileID: 11400000, guid: 8c1a17b5e39de7542951fc99fccdf212, type: 2}
+  QuestHandle: {fileID: 5239810811186397541}
+  Ui: {fileID: 84543186744593849}
+  questProgressDataBase:
+    questProgresses:
+    - id: 1
+      progress: 50
+      hasClaimed: 0
+    - id: 2
+      progress: 30
+      hasClaimed: 0
+    - id: 3
+      progress: 10
+      hasClaimed: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

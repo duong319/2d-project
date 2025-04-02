@@ -20,10 +20,8 @@ public class CharacterSelect : MonoBehaviour
     void Start()
     {
         Index = 0;
-       
-
-
         SelectCharacter();
+
     }
 
     public void PrevBtnClick()
@@ -46,26 +44,33 @@ public class CharacterSelect : MonoBehaviour
 
     private void SelectCharacter()
     {
-        for (int i = 0; i < characters.Length; i++)
-        {
-           
-            if (i == Index)
+       
+            for (int i = 0; i < characters.Length; i++)
             {
-                characters[i].SetActive(true);
-                characters[i].GetComponent<Animator>().enabled = true;
-                icons[i].GetComponent<SpriteRenderer>().color = Color.white;
-                selectedCharacter = characterPrefabs[i];
-                characterName.text = characterPrefabs[i].name;
-                selectedCharactermenu = characterPrefabsmenu[i];
-            }
-            else
-            {
-                characters[i].SetActive(false);
-                characters[i].GetComponent<Animator>().enabled = false;
-                icons[i].GetComponent<SpriteRenderer>().color = Color.black;
-            }
-            
-        }
-    }
 
+                if (i == Index)
+
+                {
+                    characters[i].SetActive(true);
+                    characters[i].GetComponent<Animator>().enabled = true;
+                    icons[i].GetComponent<SpriteRenderer>().color = Color.white;
+                    selectedCharacter = characterPrefabs[i];
+                    characterName.text = characterPrefabs[i].name;
+                    selectedCharactermenu = characterPrefabsmenu[i];
+                }
+                else
+                {
+                    characters[i].SetActive(false);
+                    characters[i].GetComponent<Animator>().enabled = false;
+                    icons[i].GetComponent<SpriteRenderer>().color = Color.black;
+                }
+
+
+
+            }
+          
+
+    }
 }
+
+

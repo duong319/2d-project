@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.TextCore.Text;
 using UnityEngine.UI;
 
+
 public class MapSelect : MonoBehaviour
 {
     private int Index;
@@ -12,6 +13,7 @@ public class MapSelect : MonoBehaviour
     [SerializeField] GameObject[] icons;
     [SerializeField] GameObject[] mapPrefabs;
    
+
     public static GameObject selectedMap;
 
 
@@ -55,6 +57,7 @@ public class MapSelect : MonoBehaviour
             {
                 Maps[i].SetActive(true);
                 icons[i].GetComponent<Image>().color = Color.white;
+               
                 selectedMap = mapPrefabs[i];
             }
             else

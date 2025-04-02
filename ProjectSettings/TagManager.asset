@@ -9,6 +9,7 @@ TagManager:
   - SceneLimit
   - Points
   - Object
+  - Audio
   layers:
   - Default
   - TransparentFX

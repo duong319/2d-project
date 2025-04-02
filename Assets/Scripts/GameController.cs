@@ -18,7 +18,7 @@ public class GameController : MonoBehaviour
     int Reward;
     public Text Textpoint;
     public Text TextReward;
-  
+
     UiManager Ui;
     [SerializeField] GameObject[] randomObject;
 
@@ -105,12 +105,14 @@ public class GameController : MonoBehaviour
     {
         return Reward;
     }
+
+ 
     public void RewardIncrement()
     {
         Reward += 2;
         TextReward.text = Reward.ToString();
         TotalReward += 2;
-        
+
 
     }
 
@@ -127,7 +129,7 @@ public class GameController : MonoBehaviour
         Score++;
         Textpoint.text = Score.ToString();
         TotalScore++;
-      
+
 
 
     }
@@ -169,6 +171,13 @@ public class GameController : MonoBehaviour
         TotalScore = PlayerPrefs.GetInt("score", 0);
         totalRewardText.text = TotalReward.ToString();
         totalScoreText.text = TotalScore.ToString();
+    }
+
+    public void GetDragon(int value)
+    {
+        TotalReward -= value;
+        Debug.Log(TotalReward);
+        Save();
     }
 
 
