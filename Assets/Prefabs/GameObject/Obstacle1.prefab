@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7738720853780753426}
   - component: {fileID: 7279272321683144207}
   - component: {fileID: 4452078333010181360}
+  - component: {fileID: 7080389363268641054}
   m_Layer: 0
   m_Name: Obstacle1
   m_TagString: Obstacle
@@ -172,3 +173,17 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &7080389363268641054
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6521192412305518156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5028d5fee853d64db43684cdac912fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  quest: {fileID: 11400000, guid: 547993c88d9e01942a1d1dc5b37522d0, type: 2}
+  QuestManager: {fileID: 3102477716457199461, guid: 71d9fb146833e5d4d981770f5889e23b, type: 3}

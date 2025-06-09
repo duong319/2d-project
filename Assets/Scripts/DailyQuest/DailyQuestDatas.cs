@@ -6,27 +6,11 @@ using UnityEngine;
 
 public class DailyQuestDatas : ScriptableObject
 {
-    public List<QuestDatas> questDatas;
+    public string description;
+    public int rewardQuality;
+    public Sprite questIcon;
+    public int totalProgress;
+    public int currentProgress;
+    public bool completed;
 }
 
-[Serializable]
-public class QuestProgress
-{
-    public int id;
-    public int progress;
-    public bool hasClaimed;
-    private bool v;
-
-    public QuestProgress(int id, int progress, bool v)
-    {
-        this.id = id;
-        this.progress = progress;
-        this.v = v;
-    }
-  
-}
-[Serializable]
-public class QuestProgressDatabase
-{
-    public List<QuestProgress> questProgresses;
-}

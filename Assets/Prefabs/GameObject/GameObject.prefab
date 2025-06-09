@@ -614,6 +614,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8103324806193150284}
   - component: {fileID: 1718299136045025898}
+  - component: {fileID: 2280402928223935900}
   m_Layer: 5
   m_Name: GameObject
   m_TagString: Untagged
@@ -662,6 +663,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MoveSpeed: 2
+--- !u!114 &2280402928223935900
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6152979352477273658}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5028d5fee853d64db43684cdac912fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  quest: {fileID: 11400000, guid: fbc34e342232ff849adaf9b12145dca1, type: 2}
+  QuestManager: {fileID: 3102477716457199461, guid: 71d9fb146833e5d4d981770f5889e23b, type: 3}
 --- !u!1 &6862674916031807657
 GameObject:
   m_ObjectHideFlags: 0

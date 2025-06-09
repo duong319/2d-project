@@ -7,10 +7,13 @@ public class Obstacles : MonoBehaviour
     public float MoveSpeed;
     GameController gameController;
     AudioManager audioManager;
+   
+   
+
     void Start()
     {
         gameController = FindObjectOfType<GameController>();
-        audioManager=GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>(); 
     }
 
     // Update is called once per frame
@@ -26,6 +29,8 @@ public class Obstacles : MonoBehaviour
             gameController.ScoreInCrement();
             Debug.Log("Point");
             audioManager.PlaySFX(audioManager.getPoint);
+          
+
         }
         if (col.CompareTag("SceneLimit"))
         {

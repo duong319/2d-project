@@ -6,8 +6,9 @@ using UnityEngine.UI;
 
 public class DailyQuestHandle : MonoBehaviour
 {
-    public QuestDatas QuestDatas;
-    public QuestProgress questProgress;
+    public DailyQuestDatas QuestDatas;
+    public Progress progress;
+
 
     public Text descriptionText;
     public Image questIcon;
@@ -16,23 +17,11 @@ public class DailyQuestHandle : MonoBehaviour
     public Text rewardQuality;
 
 
-    public void Update()
+    public void Start()
     {
-        UpdateProgress(questProgress);
-    }
-    public void SetData(QuestDatas QuestDatas, QuestProgress questProgress)
-    {
-        Debug.Log("Set");
-        this.QuestDatas = QuestDatas;
-        this.questProgress = questProgress;
         UpdateUi();
     }
 
-    public void UpdateProgress(QuestProgress questProgress)
-    {
-        this.questProgress = questProgress;
-        UpdateUi();
-    }
 
     public void UpdateUi()
     {
@@ -40,9 +29,7 @@ public class DailyQuestHandle : MonoBehaviour
         descriptionText.text = QuestDatas.description;
         questIcon.sprite = QuestDatas.questIcon;
         rewardQuality.text = QuestDatas.rewardQuality.ToString();
-
-        currentProgress.text = $"{questProgress.progress}";
-        totalProgress.text = QuestDatas.taskCount.ToString();
-
+        totalProgress.text = QuestDatas.totalProgress.ToString();
+        currentProgress.text =$"/{QuestDatas.currentProgress}";
     }
 }
